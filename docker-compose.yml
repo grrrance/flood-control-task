@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: redis:7-alpine
+    restart: always
+    environment:
+      - REDIS_PASSWORD=password
+      - REDIS_PORT=6379
+      - REDIS_DATABASES=16
+    ports:
+      - "6379:6379"
+    networks:
+      - web_api
+
+networks:
+  web_api:
+    driver: bridge

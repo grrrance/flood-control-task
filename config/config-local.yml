@@ -1,0 +1,23 @@
+redis:
+  Addr: localhost:6379
+  MinIdleConns: 200
+  PoolSize: 12000
+  PoolTimeout: 240
+  Password: password
+  DB: 0
+
+logger:
+  Development: true
+  Encoding: console
+  Level: info
+
+server:
+  AppVersion: 1.0.0
+  Port: :9000
+  ReadTimeout: 5
+  WriteTimeout: 5
+  CtxDefaultTimeout: 12
+
+flood:
+  TimeLimit: 10
+  MaxRequests: 5
